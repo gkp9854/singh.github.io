@@ -1,0 +1,313 @@
+# singh.github.io
+Project Website beta version 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singh Building Materials – Red Bricks, Sariya, Gitty | Nagwa Jaitpur Gorakhpur</title>
+<meta name="description" content="Singh Building Materials – Best quality Red Bricks, TMT Sariya, Morang, Gitty in Nagwa, Jaitpur, Gorakhpur. Tractor-Trolley & Truck delivery available. Call +91 72678 13573">
+<meta name="keywords" content="building materials nagwa jaitpur gorakhpur, red bricks gorakhpur, best sariya price gorakhpur, TMT sariya gorakhpur, morang gitty gorakhpur, construction material gorakhpur">
+<meta property="og:title" content="Singh Building Materials – Gorakhpur">
+<meta property="og:description" content="Quality building materials in Nagwa Jaitpur Gorakhpur. Red Bricks, TMT Sariya Fe500D, Morang, Gitty. WhatsApp Order: +91 72678 13573">
+<meta property="og:url" content="https://singhbuildingmaterials.in">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://singhbuildingmaterials.in">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #FF6600;
+    --orange-dark: #cc5200;
+    --orange-light: #ff8c42;
+    --dark: #1a1a1a;
+    --darker: #111111;
+    --card-bg: #1e1e1e;
+    --border: #333;
+    --text: #e5e5e5;
+    --text-muted: #999;
+    --green: #25D366;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--darker); color: var(--text); font-family: 'Rajdhani', 'Noto Sans Devanagari', sans-serif; overflow-x: hidden; }
+  .hindi { font-family: 'Noto Sans Devanagari', sans-serif; }
+  .bebas { font-family: 'Bebas Neue', cursive; letter-spacing: 2px; }
+
+  /* Navbar */
+  #navbar { position: sticky; top: 0; z-index: 100; background: rgba(17,17,17,0.97); backdrop-filter: blur(12px); border-bottom: 2px solid var(--orange); }
+  .lang-btn { background: var(--orange); color: #fff; border: none; padding: 6px 14px; border-radius: 20px; font-weight: 700; cursor: pointer; font-size: 13px; transition: all 0.2s; box-shadow: 0 0 12px rgba(255,102,0,0.5); animation: pulse-btn 2s infinite; }
+  .lang-btn:hover { background: var(--orange-dark); transform: scale(1.05); }
+  @keyframes pulse-btn { 0%,100%{box-shadow:0 0 8px rgba(255,102,0,0.4)} 50%{box-shadow:0 0 18px rgba(255,102,0,0.8)} }
+
+  /* Hero */
+  #hero { background: linear-gradient(135deg, #0d0d0d 0%, #1a0a00 50%, #0d0d0d 100%); position: relative; overflow: hidden; min-height: 92vh; display: flex; align-items: center; }
+  #hero::before { content:''; position:absolute; inset:0; background: url('https://picsum.photos/seed/construct/1200/800') center/cover no-repeat; opacity: 0.08; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,102,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,102,0,0.05) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-badge { background: var(--orange); color: #fff; padding: 4px 14px; border-radius: 4px; font-size: 13px; font-weight: 700; display: inline-block; margin-bottom: 12px; letter-spacing: 1px; }
+  .hero-title { font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 700; line-height: 1.1; }
+  .hero-title span { color: var(--orange); }
+  .hero-subtitle { color: var(--text-muted); font-size: 1.1rem; margin: 16px 0 28px; max-width: 500px; }
+  .btn-primary { background: var(--orange); color: #fff; padding: 14px 32px; border-radius: 6px; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,102,0,0.4); }
+  .btn-outline { background: transparent; color: var(--orange); padding: 13px 28px; border-radius: 6px; font-weight: 700; font-size: 1rem; border: 2px solid var(--orange); cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px; }
+  .btn-outline:hover { background: var(--orange); color: #fff; }
+  .stats-bar { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 36px; }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 2rem; font-weight: 700; color: var(--orange); font-family: 'Bebas Neue', cursive; letter-spacing: 2px; }
+  .stat-label { font-size: 12px; color: var(--text-muted); }
+
+  /* Product Cards */
+  .product-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: all 0.3s; position: relative; }
+  .product-card:hover { border-color: var(--orange); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(255,102,0,0.2); }
+  .product-card img { width: 100%; height: 200px; object-fit: cover; }
+  .product-badge { position: absolute; top: 12px; left: 12px; background: var(--orange); color: #fff; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .add-cart-btn { width: 100%; background: var(--orange); color: #fff; padding: 12px; border: none; border-radius: 0 0 10px 10px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .add-cart-btn:hover { background: var(--orange-dark); }
+
+  /* Section titles */
+  .section-title { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 700; }
+  .section-title span { color: var(--orange); }
+  .section-divider { width: 60px; height: 4px; background: var(--orange); border-radius: 2px; margin: 12px 0 24px; }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); z-index: 999; display: flex; align-items: center; justify-content: center; padding: 16px; backdrop-filter: blur(4px); }
+  .modal-box { background: var(--card-bg); border: 1px solid var(--orange); border-radius: 16px; padding: 28px; max-width: 540px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+  .modal-close { position: absolute; top: 14px; right: 16px; background: none; border: none; color: var(--text-muted); font-size: 22px; cursor: pointer; transition: color 0.2s; }
+  .modal-close:hover { color: var(--orange); }
+  .form-label { font-size: 13px; font-weight: 600; color: var(--text-muted); margin-bottom: 6px; display: block; }
+  .form-input { width: 100%; background: #2a2a2a; border: 1px solid var(--border); border-radius: 8px; padding: 11px 14px; color: var(--text); font-size: 1rem; font-family: inherit; outline: none; transition: border 0.2s; }
+  .form-input:focus { border-color: var(--orange); }
+  select.form-input option { background: #2a2a2a; }
+  .form-group { margin-bottom: 16px; }
+  .radio-group { display: flex; gap: 12px; flex-wrap: wrap; }
+  .radio-option { flex: 1; min-width: 140px; background: #2a2a2a; border: 2px solid var(--border); border-radius: 10px; padding: 12px; cursor: pointer; transition: all 0.2s; text-align: center; }
+  .radio-option.selected { border-color: var(--orange); background: rgba(255,102,0,0.1); }
+  .radio-option:hover { border-color: var(--orange-light); }
+
+  /* Toast */
+  #toast-container { position: fixed; bottom: 80px; right: 16px; z-index: 9999; display: flex; flex-direction: column; gap: 8px; }
+  .toast { background: #222; border-left: 4px solid var(--orange); border-radius: 8px; padding: 12px 18px; font-size: 14px; min-width: 240px; max-width: 320px; box-shadow: 0 4px 20px rgba(0,0,0,0.4); animation: slideIn 0.3s ease; }
+  .toast.success { border-color: #22c55e; }
+  .toast.error { border-color: #ef4444; }
+  @keyframes slideIn { from{transform:translateX(100%);opacity:0} to{transform:translateX(0);opacity:1} }
+  @keyframes slideOut { from{transform:translateX(0);opacity:1} to{transform:translateX(100%);opacity:0} }
+
+  /* WhatsApp float */
+  #wa-float { position: fixed; bottom: 20px; right: 20px; z-index: 500; background: var(--green); color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; box-shadow: 0 4px 20px rgba(37,211,102,0.5); cursor: pointer; animation: bounce 2s infinite; text-decoration: none; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+  /* Reviews */
+  .review-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s; }
+  .review-card:hover { border-color: var(--orange); }
+  .stars { color: #fbbf24; }
+
+  /* Video section */
+  .video-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  video { width: 100%; border-radius: 8px; }
+
+  /* Guide overlay steps */
+  .step-card { background: rgba(255,102,0,0.08); border: 1px solid rgba(255,102,0,0.3); border-radius: 12px; padding: 20px; }
+  .step-num { width: 36px; height: 36px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+
+  /* Admin */
+  .admin-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--darker); }
+  ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+  /* Responsive */
+  @media(max-width:640px) {
+    .stats-bar { gap: 20px; }
+    .stat-num { font-size: 1.6rem; }
+  }
+  .hidden { display: none !important; }
+  .fade-in { animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+</style>
+</head>
+<body>
+
+<!-- Toast Container -->
+<div id="toast-container"></div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917267813573" target="_blank" id="wa-float" title="WhatsApp Order">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+    <div class="flex items-center gap-3">
+      <div style="background:var(--orange);border-radius:8px;padding:6px 10px;">
+        <i class="fas fa-hard-hat text-white text-xl"></i>
+      </div>
+      <div>
+        <div class="font-bold text-white text-base leading-tight" style="font-family:'Bebas Neue',cursive;letter-spacing:1px;font-size:1.2rem;">SINGH BUILDING</div>
+        <div class="text-xs" style="color:var(--orange);letter-spacing:2px;font-size:10px;">MATERIALS</div>
+      </div>
+    </div>
+    <div class="hidden md:flex items-center gap-6 text-sm font-semibold">
+      <a href="#products" class="hover:text-orange-400 transition-colors" style="color:var(--text-muted);" id="nav-products">Products</a>
+      <a href="#videos" class="hover:text-orange-400 transition-colors" style="color:var(--text-muted);" id="nav-videos">Stock Videos</a>
+      <a href="#reviews" class="hover:text-orange-400 transition-colors" style="color:var(--text-muted);" id="nav-reviews">Reviews</a>
+      <a href="#contact" class="hover:text-orange-400 transition-colors" style="color:var(--text-muted);" id="nav-contact">Contact</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button class="lang-btn" onclick="toggleLang()" id="lang-toggle">🇮🇳 हिंदी ↔ EN</button>
+      <a href="#admin" class="text-xs px-3 py-2 rounded" style="color:var(--text-muted);border:1px solid var(--border);" id="nav-admin">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<!-- GUIDE OVERLAY (shown on first visit) -->
+<div id="guide-overlay" class="modal-overlay hidden">
+  <div class="modal-box max-w-lg w-full fade-in">
+    <button class="modal-close" onclick="closeGuide()"><i class="fas fa-times"></i></button>
+    <div class="text-center mb-6">
+      <div style="font-size:3rem;">🏗️</div>
+      <h2 class="text-2xl font-bold mt-2" id="guide-title">ऑर्डर कैसे करें / How to Order</h2>
+      <p class="text-sm mt-1" style="color:var(--text-muted);" id="guide-sub">3 आसान स्टेप्स / 3 Simple Steps</p>
+    </div>
+    <div class="space-y-4">
+      <div class="step-card flex gap-4 items-start">
+        <div class="step-num">1</div>
+        <div>
+          <div class="font-bold text-base" id="step1-title">प्रोडक्ट चुनें</div>
+          <div class="text-sm mt-1" style="color:var(--text-muted);" id="step1-desc">जो सामान चाहिए उसपे "Add to Cart" दबाएं, variant और quantity चुनें।<br><small style="color:#666">Choose your product, click "Add to Cart", select variant & quantity.</small></div>
+        </div>
+      </div>
+      <div class="step-card flex gap-4 items-start">
+        <div class="step-num">2</div>
+        <div>
+          <div class="font-bold text-base" id="step2-title">डिलीवरी चुनें</div>
+          <div class="text-sm mt-1" style="color:var(--text-muted);" id="step2-desc">Local (ट्रैक्टर-ट्रॉली) या Bulk Truck Delivery। अपना पूरा पता भरें।<br><small style="color:#666">Pick Local Tractor or Truck Delivery. Fill your complete address.</small></div>
+        </div>
+      </div>
+      <div class="step-card flex gap-4 items-start">
+        <div class="step-num">3</div>
+        <div>
+          <div class="font-bold text-base" id="step3-title">WhatsApp पर भेजें</div>
+          <div class="text-sm mt-1" style="color:var(--text-muted);" id="step3-desc">"Confirm Order" दबाएं – आपका ऑर्डर सीधे WhatsApp पर जाएगा!<br><small style="color:#666">Press "Confirm Order" – your order is sent directly to WhatsApp!</small></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn-primary w-full mt-6 justify-center text-lg" onclick="closeGuide()" id="guide-btn">
+      <i class="fas fa-shopping-cart"></i> <span id="guide-btn-text">ठीक है, शुरू करें! / Let's Shop!</span>
+    </button>
+  </div>
+</div>
+
+<!-- VARIANT MODAL (quick add) -->
+<div id="variant-modal" class="modal-overlay hidden">
+  <div class="modal-box max-w-md w-full fade-in">
+    <button class="modal-close" onclick="closeVariantModal()"><i class="fas fa-times"></i></button>
+    <h3 class="text-xl font-bold mb-4" id="variant-modal-title">Choose Variant</h3>
+    <div class="form-group">
+      <label class="form-label" id="lbl-variant">Variant चुनें / Select Variant</label>
+      <select class="form-input" id="variant-select"></select>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-qty">मात्रा / Quantity</label>
+      <div class="flex items-center gap-3">
+        <button onclick="adjQty(-1)" class="btn-outline px-4 py-2 text-xl">−</button>
+        <input type="number" id="qty-input" class="form-input text-center" value="100" min="1" style="max-width:120px;">
+        <button onclick="adjQty(1)" class="btn-outline px-4 py-2 text-xl">+</button>
+        <span id="qty-unit" class="font-semibold" style="color:var(--orange);"></span>
+      </div>
+    </div>
+    <button class="btn-primary w-full justify-center text-lg mt-2" onclick="proceedToOrder()" id="proceed-btn">
+      <i class="fas fa-arrow-right"></i> <span id="proceed-text">Order करें / Proceed</span>
+    </button>
+  </div>
+</div>
+
+<!-- ORDER SCREEN -->
+<div id="order-screen" class="modal-overlay hidden">
+  <div class="modal-box max-w-xl w-full fade-in">
+    <button class="modal-close" onclick="closeOrderScreen()"><i class="fas fa-times"></i></button>
+    <div class="flex items-center gap-3 mb-5">
+      <div style="background:var(--orange);border-radius:50%;width:42px;height:42px;display:flex;align-items:center;justify-content:center;">
+        <i class="fas fa-clipboard-list text-white"></i>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold" id="order-title">ऑर्डर डिटेल्स</h3>
+        <p class="text-sm" style="color:var(--text-muted);" id="order-sub">सभी जानकारी भरें</p>
+      </div>
+    </div>
+
+    <!-- Order summary -->
+    <div style="background:#2a2a2a;border-radius:10px;padding:14px;border:1px solid var(--orange);margin-bottom:20px;">
+      <div class="flex justify-between items-center">
+        <div>
+          <div class="font-bold text-base" id="order-product-name"></div>
+          <div class="text-sm mt-1" style="color:var(--text-muted);" id="order-product-detail"></div>
+        </div>
+        <div style="color:var(--orange);font-weight:700;" id="order-qty-display"></div>
+      </div>
+    </div>
+
+    <!-- Delivery Type -->
+    <div class="form-group">
+      <label class="form-label" id="lbl-delivery">डिलीवरी टाइप / Delivery Type *</label>
+      <div class="radio-group" id="delivery-options">
+        <div class="radio-option selected" onclick="selectDelivery('local', this)" id="delivery-local">
+          <div class="text-2xl mb-1">🚜</div>
+          <div class="font-bold text-sm" id="del-local-title">Local Delivery</div>
+          <div class="text-xs mt-1" style="color:var(--text-muted);" id="del-local-sub">10-15 km • Tractor-Trolley</div>
+        </div>
+        <div class="radio-option" onclick="selectDelivery('bulk', this)" id="delivery-bulk">
+          <div class="text-2xl mb-1">🚛</div>
+          <div class="font-bold text-sm" id="del-bulk-title">Bulk Delivery</div>
+          <div class="text-xs mt-1" style="color:var(--text-muted);" id="del-bulk-sub">Gorakhpur • 6/10 Wheeler</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Info -->
+    <div class="form-group">
+      <label class="form-label" id="lbl-name">नाम / Full Name *</label>
+      <input type="text" class="form-input" id="cust-name" placeholder="आपका नाम / Your Name">
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-phone">मोबाइल नंबर / Phone *</label>
+      <input type="tel" class="form-input" id="cust-phone" placeholder="+91 XXXXX XXXXX" maxlength="13">
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-address">पूरा पता / Full Address *</label>
+      <textarea class="form-input" id="cust-address" rows="3" placeholder="घर नंबर, गली, मोहल्ला, शहर / House No, Street, Locality, City"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="form-label" id="lbl-note">अतिरिक्त नोट / Note (Optional)</label>
+      <input type="text" class="form-input" id="cust-note" placeholder="कोई खास बात / Any special instructions">
+    </div>
+    <button class="btn-primary w-full justify-center text-lg mt-2" onclick="confirmOrder()" id="confirm-btn">
+      <i class="fab fa-whatsapp"></i> <span id="confirm-text">WhatsApp पर ऑर्डर भेजें</span>
+    </button>
+    <p class="text-xs text-center mt-3" style="color:var(--text-muted);" id="wa-note">आपका ऑर्डर WhatsApp पर भेजा जाएगा / Your order will be sent via WhatsApp</p>
+  </div>
+</div>
+d
+<!-- ADMIN MODAL -->
+<div id="admin-modal" class="modal-overlay hidden">
+  <div class="modal-box max-w-lg w-full fade-in">
+    <button class="modal-close" onclick="closeAdmin()"><i class="fas fa-times"></i></button>
+    <div id="admin-login-section">
+      <h3 class="text-2xl font-bold mb-2">🔐 Admin Login</h3>
+      <p class="text-sm mb-5" style="color:var(--text-muted);">Enter 6-digit OTP to access dashboard</p>
+      <div class="form-group">
+        <label class="form-label">OTP Code</label>
+        <input type="text" class="form-input text-center text-2xl tracking-widest" id="otp-input" placeholder="● ● ● ● ● ●" maxlength="6">
+      </div>
+      <p class="text-xs mb-4" style="color:var(--text-muted);">Demo OTP: <strong style="color:var(--orange)">123456</strong></p>
+      <button class="btn-primary w-full justify-center" onclick="verifyOTP()">
+        <i class="fas fa-unlock"></i> Verify OTP
+      </button>
+    </div>
+    <div id="admin-dashboard" class="hidden">
+      <div class="flex items-center justify-between mb-5">
+        <h3 class="text-2xl font-bold">📊 Admin Dashboard</h3>
+        <button onclick="logoutAdmin()" class="text-sm px-3 py-1 rounded" style="background:#333;color:var(--tex
